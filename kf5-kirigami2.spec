@@ -2,17 +2,17 @@
 # TODO:
 # - runtime Requires if any
 
-%define		kdeframever	5.67
+%define		kdeframever	5.79
 %define		qtver		5.9.0
 %define		kfname		kirigami2
 Summary:	Kirigami2 library
 Name:		kf5-%{kfname}
-Version:	5.67.0
+Version:	5.79.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	f9077200aa86833705a7f4250d61c0e6
+# Source0-md5:	56a4ea8393daec54189832d767f8f080
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5Gui-devel >= %{qtver}
@@ -74,10 +74,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/libKF5Kirigami2.so.5.*.*
 %{_libdir}/qt5/qml/org/kde/kirigami.2
 
-
 %files devel
 %defattr(644,root,root,755)
 %{_includedir}/KF5/Kirigami2
 %{_libdir}/cmake/KF5Kirigami2
 %{_libdir}/libKF5Kirigami2.so
 %{_libdir}/qt5/mkspecs/modules/qt_Kirigami2.pri
+%{_datadir}/kdevappwizard/templates/kirigami.tar.bz2
